@@ -79,7 +79,7 @@
 .topIngredientsContainer{
     padding: 50px 75px;
     @include flexCenter(center, column);
-    width: 100%;
+    width: auto;
 
     @include tablet{
         @include flexCenter(center, column);

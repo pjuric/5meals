@@ -3,6 +3,7 @@ import Details from './Details';
 import Explore from "./Explore";
 import Home from "./Home";
 import Search from './Search';
+import About from './About';
 
 
 function App() {
@@ -32,6 +33,9 @@ function App() {
                 </Route>
                 <Route exact path="/search/:type/:id">
                   <Search/>
+                </Route>
+                <Route exact path="/about">
+                  <About/>
                 </Route>
               </Switch>
             </div>

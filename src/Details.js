@@ -14,6 +14,7 @@ function Details() {
     const [meal, setMeal] = useState([])
     const [loading, setLoading] = useState(true)
     const [mealUrl, setMealUrl] = useState("")
+    const [noResults, setNoResults] = useState(false)
 
     useEffect(() => {
         if (id && id.length === 5) {
@@ -25,8 +26,14 @@ function Details() {
         }
       async function fetchData() {
         const details = await axios.get(mealUrl)
-        setMeal(details.data.meals[0])
-        setLoading(false)
+        if(!details || details.data.meals===null){
+            setLoading(false)
+            setNoResults(true)
+            return <h1>No results</h1>
+        } else {
+            setMeal(details.data.meals[0])
+            setLoading(false)
+        }
         return details;
       }
       fetchData();
@@ -38,6 +45,8 @@ function Details() {
             <Nav/>
             {loading ?
                 <Loading/>
+            : noResults ?
+                <h1>No Results</h1>
             :
                 <div>
                     <div className="main">

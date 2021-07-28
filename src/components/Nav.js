@@ -8,7 +8,7 @@ function Nav() {
                 <a href="/">Home</a>
                 <a href="/explore">Explore</a>
                 <a href="/search/sm">Search</a>
-                <a href="/">About</a>
+                <a href="/about">About</a>
             </div>
         </div>
     )

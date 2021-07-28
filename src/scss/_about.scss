@@ -1,0 +1,68 @@
+.aboutContainer{
+    min-height: 100vh;
+    max-height: 100vh;
+    background-image: url("../assets/backgroundDesktopSmall.png");
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+
+    @include tablet{
+        max-height: auto;
+    }
+
+    .creditsContainer{
+        padding: 50px;
+        @include flexCenter(space-evenly, row);
+        @include mobile{
+            @include flexCenter(center, column);
+
+            img{
+                margin-top: 25px;
+            }
+        }
+
+        img{
+            height: 70vh;
+        }
+    }
+
+    .creditsAndAbout{
+        width: 50%;
+        @include mobile{
+            width: 100%;
+        }
+
+        .about{
+
+            h1{
+                font-weight: 500;
+                font-size: 40px;
+                color: $black;
+            }
+
+            p, li{
+                font-weight: 300;
+                font-size: 17px;
+                line-height: 150%;
+            }
+
+            li{
+                list-style: square;
+            }
+            
+        }
+
+        .credits{
+            h1{
+                font-weight: 500;
+                font-size: 40px;
+                color: $white;
+                margin-top: 25px;
+            }
+
+            a{
+                color: $black;
+            }
+        }
+    }
+}

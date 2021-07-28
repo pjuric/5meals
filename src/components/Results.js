@@ -4,7 +4,7 @@ import Result from './Result'
 function Results({ result }) {
     return (
         <div className="resultsContainer">
-            {result.length > 1 ? result.map(meal => (
+            {result && result.length > 1 ? result.map(meal => (
                 <Result key={meal.idMeal} id={meal.idMeal} name={meal.strMeal} image={meal.strMealThumb}/>
             ))
             :

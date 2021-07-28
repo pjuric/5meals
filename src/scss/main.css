@@ -402,7 +402,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
+  width: auto;
 }
 
 @media (max-width: 800px) {
@@ -1070,6 +1070,12 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .searchButtons button {
     margin-bottom: 10px;
@@ -1563,6 +1569,100 @@ a {
   .ingredientBox .measure {
     font-size: 16px;
   }
+}
+
+.aboutContainer {
+  min-height: 100vh;
+  max-height: 100vh;
+  background-image: url("../assets/backgroundDesktopSmall.png");
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+}
+
+@media (max-width: 800px) {
+  .aboutContainer {
+    max-height: auto;
+  }
+}
+
+.aboutContainer .creditsContainer {
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media (max-width: 500px) {
+  .aboutContainer .creditsContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .aboutContainer .creditsContainer img {
+    margin-top: 25px;
+  }
+}
+
+.aboutContainer .creditsContainer img {
+  height: 70vh;
+}
+
+.aboutContainer .creditsAndAbout {
+  width: 50%;
+}
+
+@media (max-width: 500px) {
+  .aboutContainer .creditsAndAbout {
+    width: 100%;
+  }
+}
+
+.aboutContainer .creditsAndAbout .about h1 {
+  font-weight: 500;
+  font-size: 40px;
+  color: #040404;
+}
+
+.aboutContainer .creditsAndAbout .about p, .aboutContainer .creditsAndAbout .about li {
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 150%;
+}
+
+.aboutContainer .creditsAndAbout .about li {
+  list-style: square;
+}
+
+.aboutContainer .creditsAndAbout .credits h1 {
+  font-weight: 500;
+  font-size: 40px;
+  color: #F7F7F7;
+  margin-top: 25px;
+}
+
+.aboutContainer .creditsAndAbout .credits a {
+  color: #040404;
 }
 
 .navContainer {

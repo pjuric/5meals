@@ -65,6 +65,8 @@
     @include flexCenter(space-between, row);
     @include mobile{
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
         button{
             margin-bottom: 10px;

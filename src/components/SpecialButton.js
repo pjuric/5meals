@@ -16,8 +16,7 @@ function SpecialButton({ text, down, onClick, specialLink }) {
                     </div>
                 </div>
             :
-                <Link to={specialLink}>
-                    <div className="specialButton">
+                <Link className="specialButton" to={specialLink}>
                         <div className="text">{text}</div>
                         <div className="image">
                             {down ?
@@ -26,7 +25,6 @@ function SpecialButton({ text, down, onClick, specialLink }) {
                                 <img src="arrow.svg" alt=""/>
                             }
                         </div>
-                    </div>
                 </Link>
             }
         </div>
