@@ -348,7 +348,7 @@ a {
 
 @media (max-width: 500px) {
   .category {
-    width: 150px;
+    width: 145px;
     height: 45px;
   }
 }
@@ -381,6 +381,12 @@ a {
   }
 }
 
+@media (max-width: 500px) {
+  .category p {
+    font-size: small;
+  }
+}
+
 .topIngredientsContainer {
   padding: 50px 75px;
   display: -webkit-box;
@@ -396,6 +402,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
 }
 
 @media (max-width: 800px) {
@@ -403,9 +410,9 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -413,7 +420,7 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 25px 30px;
+    padding: 25px 0px;
   }
 }
 
@@ -487,9 +494,9 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -497,7 +504,7 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 25px 30px;
+    width: auto;
   }
 }
 
@@ -547,7 +554,7 @@ a {
 
 @media (max-width: 800px) {
   .topIngredient {
-    width: 80%;
+    width: 250px;
     height: 300px;
     margin-bottom: 15px;
   }
@@ -790,7 +797,7 @@ a {
 @media (max-width: 500px) {
   .nation {
     height: 30px;
-    width: 100px;
+    width: 90px;
   }
 }
 
@@ -970,6 +977,23 @@ a {
   }
 }
 
+.search form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
 .inputDiv {
   background: #F7F7F7;
   display: -webkit-box;
@@ -987,10 +1011,16 @@ a {
           flex-direction: row;
   border-radius: 5px;
   position: relative;
-  width: auto;
+  width: 550px;
   height: 40px;
   margin-top: 25px;
   margin-bottom: 10px;
+}
+
+@media (max-width: 500px) {
+  .inputDiv {
+    width: 95%;
+  }
 }
 
 .inputDiv img {
@@ -1014,7 +1044,7 @@ a {
 
 @media (max-width: 800px) {
   .inputDiv input {
-    width: 85%;
+    width: 80%;
   }
 }
 
@@ -1032,6 +1062,18 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+@media (max-width: 500px) {
+  .searchButtons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .searchButtons button {
+    margin-bottom: 10px;
+  }
 }
 
 .resultsContainer {
@@ -1314,6 +1356,13 @@ a {
   background: #040404;
   color: #F7F7F7;
   font-size: medium;
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .mealBox .mealName {
+    font-size: small;
+  }
 }
 
 .rightSection {

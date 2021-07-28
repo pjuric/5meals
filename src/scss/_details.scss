@@ -72,7 +72,12 @@
         font-size: larger;
         background: $black;
         color: $white;
-        font-size: medium
+        font-size: medium;
+        text-align: center;
+
+        @include mobile{
+            font-size: small;
+        }
     }
 }
 

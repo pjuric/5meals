@@ -3,14 +3,10 @@ import { Link } from 'react-router-dom'
 
 function Category({ name, image }) {
     return (
-        <div>
-            <Link to={`/search/c/${name}`}>
-                <div className="category">
+            <Link className="category" to={`/search/c/${name}`}>
                     <img src={image} alt={name}/>
                     <p>{name}</p>
-                </div>
             </Link>
-        </div>
     )
 }
 

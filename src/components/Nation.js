@@ -3,13 +3,9 @@ import { Link } from 'react-router-dom'
 
 function Nation({ name }) {
     return (
-        <div>
-            <Link to={`/search/a/${name}`}>
-                <div className="nation">
+            <Link className="nation" to={`/search/a/${name}`}>
                     <p className="regularParagraph">{name}</p>
-                </div>
             </Link>
-        </div>
     )
 }
 

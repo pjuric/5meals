@@ -23,12 +23,14 @@ function Search() {
         } else if(type === "si" && id) {
             setResultUrl(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${id}`)
         } else if(type === "sm" && id){
-            setResult(`https://www.themealdb.com/api/json/v1/1/search.php?s=${id}`)
-        } else setLoading(false)
-        const details = await axios.get(resultUrl)
-        setResult(details.data.meals)
-        setLoading(false)
-        return details;
+            setResultUrl(`https://www.themealdb.com/api/json/v1/1/search.php?s=${id}`)
+        } else setResultUrl("")
+
+        if(resultUrl.length > 1){
+            const details = await axios.get(resultUrl)
+            setResult(details.data.meals)
+            setLoading(false)
+        } else return setLoading(false)
       }
       fetchData();
     }, [id, resultUrl, type])
@@ -40,7 +42,6 @@ function Search() {
                 <Loading/>
             :
                 <div>
-                    {console.log(result)}
                     { type === "si" &&
                         <SearchSection placeholder="Ingredient (E.G. Onions)" specialLink="/search/sm" specialText="Search Meals by Name" blackText="Search" id={id} header="Search Meals by Ingredient Name"/>
                     }

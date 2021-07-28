@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom'
 
 function TopIngredient({ id, name, type, description }) {
     return (
-        <div>
-            <Link to={`/search/si/${name}`}>
-                <div className="topIngredient">
+        
+            <Link className="topIngredient" to={`/search/si/${name}`}>
                     <div className="imageContainer">
                         <img src={`https://www.themealdb.com/images/ingredients/${name}.png`} alt={name}/>
                         {/* {type && description &&
@@ -18,9 +17,8 @@ function TopIngredient({ id, name, type, description }) {
                     <div className="nameContainer">
                         <p>{name}</p>
                     </div>
-                </div>
             </Link>
-        </div>
+        
     )
 }
 
