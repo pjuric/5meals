@@ -1,0 +1,183 @@
+.exploreContainer{
+    min-height: auto;
+    background-image: url("../assets/backgroundDesktopLarge.png");
+    background-position: top;
+    background-size: cover;
+    width: 100vw;
+    max-width: 100vw;
+}
+
+.ourCategories{
+    @include flexCenter(center, column);
+    padding: 50px 75px;
+
+    @include tablet{
+        padding: 25px 30px;
+    }
+    
+    h1{
+        @include headerLarge;
+    }
+
+    .categoriesContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 30px;
+        row-gap: 30px;
+        width: auto;
+        margin-bottom: 25px;
+
+        @include smallDesktop{
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include tablet{
+            grid-template-columns: 1fr;
+            width: auto;
+        }
+
+        @include mobile{
+            grid-template-columns: 1fr 1fr;
+            row-gap: 20px;
+        }
+    }
+}
+
+.category{
+    width: 400px;
+    height: 75px;
+    background: $white;
+    border-radius: 5px;
+    padding: 0 5px;
+    cursor: pointer;
+    position: relative;
+    @include flexCenter(space-between, row);
+
+    &:hover > img { 
+        transform: scale(1.1); 
+    }
+
+    @include mobile{
+        width: 150px;
+        height: 45px;
+    }
+
+    img{
+        height: 90%;
+        transition: all 250ms ease-in-out;
+    }
+
+    p{
+        @include regularParagraph;
+        width: 70%;
+    }
+}
+
+.topIngredientsContainer{
+    padding: 50px 75px;
+    @include flexCenter(center, column);
+
+    @include tablet{
+        @include flexCenter(space-between, column);
+        padding: 25px 30px;
+    }
+    
+    h1{
+        @include headerLarge;
+        text-align: center;
+    }
+
+    .ingredientsContainer{
+        @include flexCenter(space-between, row);
+        width: 100%;
+        margin-bottom: 25px;
+
+        @include smallDesktop{
+            @include flexCenter(space-between, row);
+        }
+
+        @include tablet
+        {
+            @include flexCenter(space-between, column);
+            padding: 25px 30px;
+        }
+    }
+}
+
+.topIngredient{
+    background: $black;
+    width: 375px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover > .imageContainer img { 
+        transform: scale(1.1); 
+    }
+
+    &:hover > .imageContainer .description { 
+        @include flexCenter(center, column);
+        position: absolute;
+    }
+
+    @include smallDesktop{
+        width: 250px;
+        height: 250px;
+    }
+
+    @include tablet{
+        width: 80%;
+        height: 300px;
+        margin-bottom: 15px;
+    }
+
+    .imageContainer{
+        height: 75%;
+        @include flexCenter(center, row);
+        position: relative;
+        transition: all 250ms ease-in-out;
+
+        img{
+            width: auto;
+            max-width: 100%;
+            height: 90%;
+            transition: all 250ms ease-in-out;
+        }
+
+        .description{
+            display: none;
+            background: $white;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            color: $black;
+
+            h4{
+                font-size: x-large;
+
+                span{
+                    color: $primaryBackground;
+                    font-weight: bolder;
+                }
+            }
+            
+            p{
+                padding: 5px 10px;
+                text-align: center;
+                font-size: small;
+            }
+        }
+    }
+
+    .nameContainer{
+        background: $white;
+        height: 25%;
+        @include flexCenter(center, row);
+
+        p{
+            @include regularParagraph;
+        }
+    }
+}

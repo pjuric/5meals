@@ -1,0 +1,107 @@
+@mixin flexCenter($justify, $direction){
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin mobile{
+    @media (max-width: $small){
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media (max-width: $medium){
+        @content;
+    }
+}
+
+@mixin smallDesktop{
+    @media (max-width: $regular){
+        @content;
+    }
+}
+
+@mixin headerLarge{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 130%;
+    color: $black;
+    margin-bottom: 25px;
+
+    span{
+        color: $white;
+    }
+
+    @include smallDesktop{
+        font-size: 30px;
+    }
+
+    @include tablet{
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 130%;
+        text-align: center;
+    }
+}
+
+@mixin headerSmall{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 130%;
+    color: $black;
+
+    span{
+        color: $white;
+    }
+
+    @include smallDesktop{
+        font-size: 30px;
+    }
+
+    @include tablet{
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 130%;
+        text-align: center;
+    }
+}
+
+@mixin lightParagraph{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+    color: $black;
+
+    @include smallDesktop{
+        font-size: 16px;
+    }
+
+    @include tablet{
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 135%;
+        text-align: center;
+    }
+}
+
+@mixin regularParagraph{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    color: $black;
+    text-align: center;
+
+    @include smallDesktop{
+        font-size: 16px;
+    }
+
+    @include tablet{
+        font-weight: 400;
+        font-size: 13.5px;
+    }
+}

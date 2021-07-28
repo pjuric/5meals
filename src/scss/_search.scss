@@ -1,0 +1,121 @@
+.searchContainer{
+    background-image: url("../assets/backgroundDesktopLarge.png");
+    background-position: top;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.search{
+    @include flexCenter(center, column);
+    padding: 50px 75px;
+
+    @include tablet{
+        padding: 25px 30px;
+    }
+
+    h1{
+        @include headerLarge;
+    }
+}
+
+.inputDiv{
+    background: $white;
+    @include flexCenter(space-between, row);
+    border-radius: 5px;
+    position: relative;
+    width: auto;
+    height: 40px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+
+    img{
+        height: 100%;
+        width: auto;
+        opacity: 0.85;
+    }
+
+    input{
+        height: 100%;
+        width: 90%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        background-color: $white;
+        outline: none;
+        border: none;
+        padding-left: 5px;
+
+        @include tablet{
+            width: 85%;
+        }
+    }
+}
+
+.searchButtons{
+    @include flexCenter(space-between, row);
+}
+
+.resultsContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 50px;
+    column-gap: 100px;
+    padding: 50px 75px;
+    width: auto;
+    align-content: center;
+    align-items: center;
+
+    @include smallDesktop{
+        grid-template-columns: 1fr 1fr;
+        row-gap: 25px;
+        column-gap: 25px;
+    }
+
+    @include tablet{
+        padding: 25px 30px;
+        grid-template-columns: 1fr 1fr;
+        width: auto;
+    }
+
+    @include mobile{
+        grid-template-columns: 1fr;
+    }
+}
+
+.resultSample{
+    width: 350px;
+    height: auto;
+    border-radius: 5px;
+    @include flexCenter(space-around, column);
+
+    @include tablet{
+        width: 225px;
+        font-size: small;
+    }
+
+    img{
+        width: 100%;
+        height: auto;
+    }
+
+    .nameContainer{
+        width: 100%;
+        text-align: center;
+        color: $black;
+        background: $white;
+        height: 50px;
+        @include flexCenter(center, row)
+    }
+}
+
+.fullwidth{
+    width: 100vw;
+    margin-top: 50px;
+    text-align: center;
+    @include flexCenter(center, column);
+
+    h1{
+        text-align: center;
+    }
+}

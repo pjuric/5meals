@@ -1,0 +1,187 @@
+.detailsContainer{
+    background-image: url("../assets/backgroundDesktopLarge.png");
+    background-position: top;
+    background-size: cover;
+    margin-bottom: 50px;
+
+    .main{
+        padding: 50px 75px;
+        height: auto;
+        @include flexCenter(space-between, row);
+
+        @include smallDesktop{
+            padding: 25px 30px;
+            @include flexCenter(center, column);
+        }
+    }
+}
+
+.secondSection{
+    padding: 0 75px;
+
+    @include smallDesktop{
+        padding: 0 30px;
+    }
+
+    .instructions{
+        @include lightParagraph;
+        margin-bottom: 25px;
+    }
+
+    .buttonsNtags{
+        @include flexCenter(space-between, row);
+        @include tablet{
+            flex-direction: column;
+            text-align: center;
+
+            p{
+                margin-top: 25px;
+            }
+        }
+    }
+}
+
+.mealBox{
+    height: auto;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 5px;
+
+    @include tablet{
+        width: 500px;
+    }
+
+    @include mobile{
+        width: 325px;
+    }
+
+    img{
+        height: auto;
+        width: 100%;
+        border-radius: 5px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .mealName{
+        @include flexCenter(center, row);
+        height: 90px;
+        width: 100%;
+        font-size: larger;
+        background: $black;
+        color: $white;
+        font-size: medium
+    }
+}
+
+.rightSection{
+    @include flexCenter(space-between, column);
+    min-height: 690px;
+    // height: 100%;
+    width: 45vw;
+
+    @include smallDesktop{
+        width: 90%;
+        margin-top: 50px;
+        min-height: auto;
+    }
+
+    @include tablet{
+        width: 95%;
+    }
+}
+
+.twoCategories{
+    @include flexCenter(space-between, row);
+    width: 100%;
+    align-self: flex-start;
+    margin-bottom: 25px;
+}
+
+.mealCategory{
+    @include flexCenter(space-between, row);
+    background: $black;
+    color: $white;
+    width: 300px;
+    height: 60px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+
+    @include tablet{
+        width: 200px;
+    }
+
+    @include tablet{
+        width: 150px;
+        height: 40px;
+    }
+
+    .categoryIcon{
+        @include flexCenter(center, row);
+        background: $white;
+        width: 30%;
+        height: 100%;
+
+        img{
+            height: 80%;
+        }
+    }
+
+    p{
+        text-align: center;
+        width: 70%;
+
+        @include tablet{
+            font-size: small;
+        }
+    }
+}
+
+.ingredientListContainer{
+    width: 100%;
+    flex-grow: 1;
+    @include flexCenter(flex-start, column)
+}
+
+.ingredientBox{
+    @include flexCenter(space-between, row);
+    width: 100%;
+    height: 45px;
+    background: $white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    color: $black;
+
+    img{
+        height: 100%;
+    }
+
+    .ingredientName{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        text-align: left;
+        flex-grow: 1;
+        margin-left: 10px;
+
+        @include tablet{
+            font-size: 15px;
+        }
+    }
+
+    .measure{
+        font-style: italic;
+        font-weight: 300;
+        font-size: 20px;
+        margin-right: 10px;
+        text-align: right;
+
+        @include tablet{
+            font-size: 16px;
+        }
+    }
+}

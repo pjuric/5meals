@@ -1,0 +1,111 @@
+.nationalDishesWhole{
+    @include flexCenter(space-between, row);
+    padding: 50px 75px;
+
+    @include tablet{
+        padding: 25px 30px;
+    }
+
+    .nationalDishes{
+        @include flexCenter(center, column);
+        width: 65%;
+
+        @include tablet{
+            width: 100%;
+        }
+
+        h1{
+            @include headerLarge;
+            text-align: center;
+        }
+
+        .nationalDishesContainer{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            row-gap: 10px;
+            width: 100%;
+            justify-items: center;
+
+            @include smallDesktop{
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+    }
+
+    img{
+        width: 25%;
+        @include tablet{
+            display: none;
+        }
+    }
+}
+
+.nation{
+    @include flexCenter(center, row);
+    height: 50px;
+    width: 200px;
+    background: $white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.25s;
+
+    &:hover{
+        height: 40px;
+    }
+
+    @include smallDesktop{
+        width: 150px;
+    }
+
+    @include tablet{
+        height: 40px;
+        width: 150px;
+        font-size: small;
+    }
+
+    @include mobile{
+        height: 30px;
+        width: 100px;
+    }
+}
+
+.ideasContainer{
+    @include flexCenter(space-between, row);
+    padding: 50px 75px;
+
+    @include tablet{
+        padding: 25px 30px;
+    }
+
+    img{
+        width: 40%;
+
+        @include tablet{
+            display: none;
+        }
+    }
+
+    .descriptionSection{
+        @include flexCenter(center, column);
+        width: 50%;
+        align-items: flex-start;
+
+        h1{
+            @include headerLarge;
+        }
+
+        p{
+            @include lightParagraph;
+            margin-bottom: 25px;
+        }
+
+        @include tablet{
+            width: auto;
+            align-items: center;
+        }
+    }
+}
+
+.regularParagraph{
+    color: $black;
+}
